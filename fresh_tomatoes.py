@@ -127,6 +127,7 @@ movie_tile_content = '''
     <h2>{movie_title}</h2>
     <p>({movie_year})</p>
     <p>{movie_desecription}</p2>
+    <p>Starring: {movie_stars}</p2>
 </div>
 '''
 
@@ -143,13 +144,23 @@ def create_movie_tiles_content(movies):
         trailer_youtube_id = (youtube_id_match.group(0) if youtube_id_match
                               else None)
 
+        #Create a comma separated list of starring actors and acresses
+        star_list = ""
+        first = 1
+        for star in movie.stars:
+            if first == 0:
+                star_list += ", "
+            star_list += star
+            first = 0
+
         # Append the tile for the movie with its content filled in
         content += movie_tile_content.format(
             movie_title=movie.title,
             movie_desecription=movie.storyline,
             movie_year=movie.year,
             poster_image_url=movie.poster_image_url,
-            trailer_youtube_id=trailer_youtube_id
+            trailer_youtube_id=trailer_youtube_id,
+            movie_stars=star_list
         )
     return content
 
