@@ -131,11 +131,12 @@ movie_tile_content = '''
 </div>
 '''
 
-
 def create_movie_tiles_content(movies):
+    sorted_movies = sorted(movies, key=lambda f: f.title)
+
     # The HTML content for this section of the page
     content = ''
-    for movie in movies:
+    for movie in sorted_movies:
         # Extract the youtube ID from the url
         youtube_id_match = re.search(
             r'(?<=v=)[^&#]+', movie.trailer_youtube_url)
