@@ -1,6 +1,6 @@
 import media, fresh_tomatoes
 
-#Descriptions are copied from IMDB.
+#Descriptions are copied from IMDB.com.
 
 edward_scissorhands = media.Movie("Edward Scissorhands", "A gentle man, with scissors for hands, is brought into a new community after living in isolation.", 1990, "https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Edwardscissorhandsposter.JPG/220px-Edwardscissorhandsposter.JPG", "https://www.youtube.com/watch?v=eq2PPFUhfpo")
 moulin_rouge = media.Movie("Moulin Rouge", "A poet falls for a beautiful courtesan whom a jealous duke covets in this stylish musical, with music drawn from familiar 20th century sources.", 2001, "https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Moulin_rouge_poster.jpg/220px-Moulin_rouge_poster.jpg", "https://www.youtube.com/watch?v=dtEgAx80NC4")
