@@ -36,6 +36,7 @@ main_page_head = '''
             height: 100%;
         }
         .movie-tile {
+            height: 590px;
             margin-bottom: 20px;
             padding-top: 20px;
         }
