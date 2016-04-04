@@ -35,14 +35,52 @@ main_page_head = '''
             width: 100%;
             height: 100%;
         }
+        .blank-space {
+            display: block;
+            visibility: hidden;
+            height: 200px;
+        }
         .movie-tile {
-            height: 590px;
+            height: 490px;
             margin-bottom: 20px;
             padding-top: 20px;
+        }
+        .dropdown {
+            display: block;
+            visibility: hidden;
+            position: absolute;
+            left: 20px;
+            bottom: 15px;
+        }
+        .dropdown-button {
+            font-size: 16px;
+            text-decoration: underline;
+            padding: 0px 5px;
+            /* color: white;
+            border-style: solid;
+            border-width: 2px;
+            border-color: #AAAAAA;
+            background-color: #AAAAAA; */
+        }
+        .dropdown-details {
+            display: none;
+            position: absolute;
+            width: 350px;
+            padding: 15px 10px 2px 10px;
+            text-align: left;
+            background-color: #FFFFFF;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
+            z-index: 1;
         }
         .movie-tile:hover {
             background-color: #EEE;
             cursor: pointer;
+        }
+        .movie-tile:hover .dropdown {
+            visibility: visible;
+        }
+        .dropdown:hover .dropdown-details {
+            display: block;
         }
         .scale-media {
             padding-bottom: 56.25%;
@@ -116,6 +154,8 @@ main_page_content = '''
     <div class="container">
       {movie_tiles}
     </div>
+    <div class="blank-space">
+    </div>
   </body>
 </html>
 '''
@@ -126,9 +166,14 @@ movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
     <img src="{poster_image_url}" width="220" height="342">
     <h2>{movie_title}</h2>
-    <p>({movie_year})</p>
-    <p>{movie_desecription}</p2>
-    <p>Starring: {movie_stars}</p2>
+    <div class="dropdown">
+        <div class="dropdown-button">Details</div>
+        <div class="dropdown-details">
+            <p><span style="text-decoration: underline;">Release Year:</span> {movie_year}</p>
+            <p><span style="text-decoration: underline;">Synopsis:</span> {movie_desecription}</p2>
+            <p><span style="text-decoration: underline;">Starring:</span> {movie_stars}</p2>
+        </div>
+    </div>
 </div>
 '''
 
