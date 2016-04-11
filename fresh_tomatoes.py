@@ -47,7 +47,6 @@ main_page_head = '''
         }
         .dropdown {
             display: block;
-            visibility: hidden;
             position: absolute;
             left: 20px;
             bottom: 15px;
@@ -56,11 +55,6 @@ main_page_head = '''
             font-size: 16px;
             text-decoration: underline;
             padding: 0px 5px;
-            /* color: white;
-            border-style: solid;
-            border-width: 2px;
-            border-color: #AAAAAA;
-            background-color: #AAAAAA; */
         }
         .dropdown-details {
             display: none;
@@ -178,6 +172,7 @@ movie_tile_content = '''
 '''
 
 def create_movie_tiles_content(movies):
+    # Sort the movies alphabetically by title before they are displayed
     sorted_movies = sorted(movies, key=lambda f: f.title)
 
     # The HTML content for this section of the page
