@@ -30,7 +30,7 @@ Add a new movie instance to entertainment_center.py with information about the m
 
 ##Credit
 
-This project is an extension of the material provided in Udacity's "Programming Foundations with Python" course, which includes most of the content of the fresh_tomatoes.py file, as well as structural outlines for media.py and entertainment_center.py.
+This project is an extension of the material provided in Udacity's "Programming Foundations with Python" course, which includes most of the content of the fresh_tomatoes.py file, as well as structural outlines for media.py and entertainment_center.py. This github repository was forked from adarsh0906/ud036_StarterCode.
 
 ####Extended Functionality from Ryan Coughlan
 
