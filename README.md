@@ -4,7 +4,7 @@ The Movie Trailer Website is a website that displays information about a select 
 
 ##Installation
 
-**Clone the GitHub repository or copy the contained files into a directory:**
+Clone the GitHub repository or copy the contained files into a directory:
 
 `$ git clone https://github.com/supi25/Movie_Trailer_Website.git`
 
